@@ -50,5 +50,45 @@ if ("serviceWorker" in navigator) {
   });
 }
 </script>
+
+<style>
+#ag-buy-fab{position:fixed;right:16px;bottom:16px;z-index:999999;width:60px;height:60px;border-radius:50%;
+background:#00D632;color:#0E0E10;font-size:28px;font-weight:800;border:none;cursor:pointer;
+display:flex;align-items:center;justify-content:center;box-shadow:0 6px 24px rgba(0,214,50,.45);
+font-family:Arial,sans-serif}
+#ag-buy-modal{position:fixed;inset:0;z-index:1000000;background:rgba(0,0,0,.72);
+display:flex;align-items:center;justify-content:center;padding:20px}
+#ag-buy-card{background:#17171A;color:#fff;border-radius:20px;max-width:340px;width:100%;padding:28px 24px;
+text-align:center;font-family:Arial,sans-serif;border:1px solid #2C2C31}
+#ag-buy-card h2{margin:0 0 4px;font-size:22px}
+#ag-buy-card .sub{color:#8B8D94;font-size:13px;margin-bottom:16px}
+#ag-buy-card .price{font-size:40px;font-weight:800;color:#00D632;margin:8px 0 16px}
+#ag-buy-pay{display:block;background:#00D632;color:#000;font-weight:800;font-size:17px;
+border-radius:14px;padding:15px;margin:0 0 10px;text-decoration:none}
+#ag-buy-close{background:none;border:1px solid #3A3A40;color:#8B8D94;border-radius:12px;
+padding:10px 18px;font-size:14px;cursor:pointer;margin-top:4px}
+#ag-buy-note{font-size:11px;color:#636366;margin-top:12px;line-height:1.5}
+</style>
+<button id="ag-buy-fab" aria-label="Support ATM Go">$</button>
+<div id="ag-buy-modal" hidden>
+<div id="ag-buy-card">
+<h2>ATM Go</h2>
+<div class="sub">by Allen Mack &bull; free to play</div>
+<div class="price">$9.99</div>
+<div class="sub">Love the game? Support the developer and own the vibe.</div>
+<a id="ag-buy-pay" href="https://cash.app/$AllenM11" target="_blank" rel="noopener">Pay with Cash App</a>
+<button id="ag-buy-close">Not now</button>
+<div id="ag-buy-note">You'll be sent to Cash App to complete payment.<br>More payment options coming soon.</div>
+</div>
+</div>
+<script>
+(function(){
+var fab=document.getElementById('ag-buy-fab'),modal=document.getElementById('ag-buy-modal'),
+close=document.getElementById('ag-buy-close');
+fab.addEventListener('click',function(){modal.hidden=false;});
+close.addEventListener('click',function(){modal.hidden=true;});
+modal.addEventListener('click',function(e){if(e.target===modal)modal.hidden=true;});
+})();
+</script>
 </body>
 </html>

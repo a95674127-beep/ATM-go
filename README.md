@@ -2,6 +2,12 @@
 
 **Money that moves with you.** A dice board game by Allen Mack.
 
+🎮 **Play now:** https://a95674127-beep.github.io/ATM-go/
+📲 **Install page:** https://a95674127-beep.github.io/ATM-go/install.html
+
+
+**Money that moves with you.** A dice board game by Allen Mack.
+
 ## Play
 
 The live game is hosted with GitHub Pages (see URL in the repo's About section once Pages is enabled).

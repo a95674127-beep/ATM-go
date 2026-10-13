@@ -1,5 +1,5 @@
-// ATM Go service worker — offline-first app shell
-const CACHE = "atm-go-v1";
+// ATM Go service worker â offline-first app shell
+const CACHE = "atm-go-v2";
 const ASSETS = ["./index.html", "./manifest.json", "./icon.svg"];
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting()));

@@ -1,7 +1,7 @@
 {
   "name": "ATM Go",
   "short_name": "ATM Go",
-  "description": "ATM Go — money that moves with you. A dice board game by Allen Mack.",
+  "description": "ATM Go â money that moves with you. Cash Dash. A cash-themed casual game by Allen Mack.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
